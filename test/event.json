@@ -1,0 +1,24 @@
+{
+  "session": {
+    "sessionId": "SessionId.foo.bar",
+    "application": {
+      "applicationId": "amzn1.ask.skill.foo.bar"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.foo.bar"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.foo.bar",
+    "locale": "en-US",
+    "timestamp": "2016-10-19T07:32:20Z",
+    "intent": {
+      "name": "HelloIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}

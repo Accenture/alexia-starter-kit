@@ -1,0 +1,4 @@
+--require test/test-bundler.js
+--reporter spec
+--recursive
+-u exports

@@ -1,0 +1,29 @@
+{
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "blockBindings": true,
+        "defaultParams": true,
+        "forOf": true,
+        "generators": true,
+        "modules": false,
+        "templateStrings": true
+    },
+    "globals": {
+        "module": true,
+        "require": true,
+        "console": true,
+        "Promise": true
+     },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "strict": [2, "global"],
+        "no-underscore-dangle": 0,
+        "no-undef": 2,
+        "no-unused-vars": 0,
+        "quotes": [2, "single"],
+        "semi": [1, "always"]
+    }
+}
