@@ -7,6 +7,7 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- --opts .mocharc",
+    "test-lcov": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --opts .mocharc -u exports --reporter spec",
     "test:dev": "nodemon --exec \"mocha --opts .mocharc || true\"",
     "start": "node server/start-http-server.js",
     "mon": "nodemon --exec \"node server/start-http-server.js\"",
