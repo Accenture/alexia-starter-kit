@@ -1,3 +1,4 @@
+'use strict';
 /* global setTimeout */
 const items = {
   'car': 'a road vehicle, typically with four wheels',

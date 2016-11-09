@@ -1,3 +1,4 @@
+'use strict';
 /* global __dirname */
 const chai = require('chai');
 const sinon = require('sinon');

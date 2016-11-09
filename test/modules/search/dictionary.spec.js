@@ -1,3 +1,4 @@
+'use strict';
 const dictionary = rootRequire('src/modules/search/dictionary');
 
 describe('(Service) Dictionary', () => {

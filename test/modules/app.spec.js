@@ -1,3 +1,4 @@
+'use strict';
 const app = rootRequire('src/app');
 const alexia = require('alexia');
 

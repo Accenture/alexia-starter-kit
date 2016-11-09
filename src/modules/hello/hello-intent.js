@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Register HelloIntent
  * Example invocation 1:

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Main Alexa app entry.
  * Global app configuration and all intent registering belongs here
