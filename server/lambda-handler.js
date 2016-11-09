@@ -5,10 +5,10 @@ const app = require('../src/app');
  */
 module.exports.handler = (request, context, callback) => {
 
-    // Handle request using Alexia
-    app.handle(request, alexaResponse => {
+  // Handle request using Alexia
+  app.handle(request, alexaResponse => {
 
-        // Invoke callback with our response
-        callback(null, alexaResponse);
-    });
+    // Invoke callback with our response
+    callback(null, alexaResponse);
+  });
 };

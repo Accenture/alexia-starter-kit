@@ -9,6 +9,6 @@ global.chaiAsPromised = chaiAsPromised;
 
 chai.use(chaiAsPromised);
 
-global.rootRequire = function(name) {
-    return require(`${__dirname}/../${name}`);
+global.rootRequire = name => {
+  return require(`${__dirname}/../${name}`);
 };

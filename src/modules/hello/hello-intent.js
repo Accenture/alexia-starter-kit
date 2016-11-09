@@ -8,7 +8,7 @@
  *      - 'hello'
  */
 module.exports = app => app.intent('HelloIntent', 'hello', () => {
-    return {
-        text: 'Hello'
-    };
+  return {
+    text: 'Hello'
+  };
 });

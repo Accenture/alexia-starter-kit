@@ -26,16 +26,19 @@
   ],
   "dependencies": {
     "alexia": "^2.0.0",
-    "hapi": "^13.5.3",
-    "serverless": "^1.0.2"
+    "hapi": "^15.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
+    "chai-as-promised": "^6.0.0",
     "eslint": "^3.1.1",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
-    "nodemon": "^1.10.0",
-    "sinon": "^1.17.5"
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "serverless": "^1.1.0",
+    "sinon": "^1.17.6"
   }
 }

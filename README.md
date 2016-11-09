@@ -15,7 +15,7 @@ Application contains fully working `HelloIntent` and `SearchIntent` examples. Fe
 - `npm install`
 - `npm start`
 
-## Project structure
+## Project Structure
 
 ```
 .
@@ -26,14 +26,14 @@ Application contains fully working `HelloIntent` and `SearchIntent` examples. Fe
 │   └── start-http-server.js     # Starts HTTP Hapi server (Hapi is optional dependency)
 ├── src/                         # Application source code
 │   ├── app.js                   # Main Alexa Skill entry point
-│   ├── modules/                 # Intents grouped together in modular structure
-│   │   ├── hello/               # Hello Module
-│   │   │   └── hello-intent.js  # Hello Intent
-│   │   ├── search/              # Search Module
-│   │   │   ├── search-intent.js # Search Intent
-│   │   │   └── dictionary.js    # Service used by Search Intent
-│   │   └── ...
-│   └── [services/]              # Common services / utilities - used across intents
+│   ├── [common/]                # Common services / utilities - used across intents
+│   └── modules/                 # Intents grouped together in modular structure
+│       ├── hello/               # Hello Module
+│       │   └── hello-intent.js  # Hello Intent
+│       ├── search/              # Search Module
+│       │   ├── search-intent.js # Search Intent
+│       │   └── dictionary.js    # Service used by Search Intent
+│       └── ...
 └── tests/                       # Unit tests. Should reflect src directory structure
 ```
 
