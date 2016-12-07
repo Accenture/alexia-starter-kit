@@ -40,5 +40,10 @@
     "nodemon": "^1.11.0",
     "serverless": "^1.1.0",
     "sinon": "^1.17.6"
-  }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src/"
+  ]
 }
