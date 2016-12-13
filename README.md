@@ -19,22 +19,22 @@ Application contains fully working `HelloIntent` and `SearchIntent` examples. Fe
 
 ```
 .
-├── bin/                         # Binaries and utility scripts
-│   └── generate.js              # Runs speech assets generation
-├── server/                      # Startup scripts for HTTP server & Lambda handler
-│   ├── lambda-handler.js        # Request handler for AWS Lambda
-│   └── start-http-server.js     # Starts HTTP Hapi server (Hapi is optional dependency)
-├── src/                         # Application source code
-│   ├── app.js                   # Main Alexa Skill entry point
-│   ├── [common/]                # Common services / utilities - used across intents
-│   └── modules/                 # Intents grouped together in modular structure
-│       ├── hello/               # Hello Module
-│       │   └── hello-intent.js  # Hello Intent
-│       ├── search/              # Search Module
-│       │   ├── search-intent.js # Search Intent
-│       │   └── dictionary.js    # Service used by Search Intent
+├── bin/                            # Binaries and utility scripts
+│   └── generate.js                 # Runs speech assets generation
+├── server/                         # Startup scripts for HTTP server & Lambda handler
+│   ├── lambda-handler.js           # Request handler for AWS Lambda
+│   └── start-http-server.js        # Starts HTTP Hapi server (Hapi is optional dependency)
+├── src/                            # Application source code
+│   ├── app.js                      # Main Alexa Skill entry point
+│   ├── [common/]                   # Common services / utilities - used across intents
+│   └── modules/                    # Intents grouped together in modular structure
+│       ├── hello/                  # Hello Module
+│       │   └── hello-intent.js     # Hello Intent
+│       ├── search/                 # Search Module
+│       │   ├── search-intent.js    # Search Intent
+│       │   └── lookup-service.js   # Service used by Search Intent
 │       └── ...
-└── tests/                       # Unit tests. Should reflect src directory structure
+└── tests/                          # Unit tests. Should reflect src directory structure
 ```
 
 Depending on the complexity of your application you may want to use flat structure and put all intents in the same directory. You are free to do so, but keep in mind that you have to modify the `./src/app.js` file to register all intents using the correct pattern or to register them manually. See [node-glob](https://github.com/isaacs/node-glob) for more pattern matching examples.

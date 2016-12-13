@@ -4,3 +4,4 @@ coverage
 speechAssets
 *.log
 .serverless
+.lambci.json

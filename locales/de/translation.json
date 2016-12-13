@@ -1,0 +1,23 @@
+{
+  "LaunchRequest": {
+    "text": "Wilkomen bei Alexia Starter Kit"
+  },
+  "DefaultActionFail": {
+    "text": "Ihr Anweisung ist ungültig"
+  },
+
+  "HelloIntent": {
+    "utterances": "hallo",
+    "text": "Hallo"
+  },
+  "SearchIntent": {
+    "utterances": [
+      "Suche nach {item:Item}",
+      "Was ist {item:Item}",
+      "Beschreiben {item:Item}"
+    ],
+    "text": "{{slots.item}} ist {{result}}",
+    "text_error1": "Ich habe Ihre Suchbegriffe nicht verstanden",
+    "text_error2": "Keine Übereinstimmung für {{item}} gefunden"
+  }
+}

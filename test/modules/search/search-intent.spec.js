@@ -3,7 +3,7 @@ const alexia = require('alexia');
 const sinon = require('sinon');
 
 const app = rootRequire('src/app');
-const dictionary = rootRequire('src/modules/search/dictionary');
+const lookupService = rootRequire('src/modules/search/lookup-service');
 
 describe('(Intent) Search', () => {
 
@@ -12,9 +12,9 @@ describe('(Intent) Search', () => {
   let dictionaryStub;
 
   beforeEach(() => {
-    dictionaryStub = sinon.stub(dictionary, 'search', item => {
+    dictionaryStub = sinon.stub(lookupService, 'search', (key, localizedSearchFcn) => {
       return new Promise(resolve => {
-        if (item === unknownItem) {
+        if (key === unknownItem) {
           resolve();
         } else {
           resolve(description);

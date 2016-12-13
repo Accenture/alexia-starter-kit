@@ -1,6 +1,6 @@
 'use strict';
 
-const dictionary = require('./dictionary');
+const lookupService = require('./lookup-service');
 
 /**
  * Register SearchIntent
@@ -12,25 +12,26 @@ const dictionary = require('./dictionary');
  *      - 'What is <item>?'
  */
 module.exports = app => {
-  app.customSlot('Item', Object.keys(dictionary.items));
-
-  const utterances = [
-    'Search for {item:Item}',
-    'What is {item:Item}',
-    'Describe me {item:Item}'
-  ];
-
-  app.intent('SearchIntent', utterances, (slots, attrs, data, done) => {
+  app.intent('SearchIntent', (slots, attrs, data, done) => {
     if (!slots.item) {
-      done('I did not understand your search item');
+      done(
+        app.t('text_error1')
+      );
       return;
     }
 
-    dictionary.search(slots.item).then(result => {
+    const locale = data.request.locale || app.i18next.language || 'en-US';
+    const dictionaryT = app.i18next.getFixedT(locale, 'dictionary');
+
+    lookupService.search(slots.item, dictionaryT).then(result => {
       if (result) {
-        done(`${slots.item} is ${result}`);
+        done(
+          app.t('text', { slots, result })
+        );
       } else {
-        done(`No match found for ${slots.item}`);
+        done(
+          app.t('text_error2', slots)
+        );
       }
     });
   });
