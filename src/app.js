@@ -34,13 +34,6 @@ app.onStart(() => {
   return app.t('text');
 });
 
-/**
- * Translate also general response to invalid command
- */
-app.defaultActionFail(() => {
-  return app.t('text');
-});
-
 // Register all intents matching specified pattern
 app.registerIntents('src/modules/**/*-intent.js');
 
