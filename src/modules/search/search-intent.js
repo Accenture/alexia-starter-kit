@@ -17,7 +17,6 @@ module.exports = app => {
       return done(app.t('text_error1'));
     }
 
-    // const result = app.t(`dictionary.${slots.item}`);
     const dictionary = app.t('dictionary', {
       returnObjects: true,
       defaultValue: {}

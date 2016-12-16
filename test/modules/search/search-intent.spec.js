@@ -11,7 +11,7 @@ describe('(Intent) Search', () => {
   let dictionaryStub;
 
   beforeEach(() => {
-    dictionaryStub = sinon.stub(lookupService, 'search', (key, localizedSearchFcn) => {
+    dictionaryStub = sinon.stub(lookupService, 'search', (key, dictionary) => {
       return new Promise(resolve => {
         if (key === unknownItem) {
           resolve();
