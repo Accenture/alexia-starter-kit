@@ -14,25 +14,22 @@ const lookupService = require('./lookup-service');
 module.exports = app => {
   app.intent('SearchIntent', (slots, attrs, data, done) => {
     if (!slots.item) {
-      done(
-        app.t('text_error1')
-      );
-      return;
+      return done(app.t('text_error1'));
     }
 
-    const locale = data.request.locale || app.i18next.language || 'en-US';
-    const dictionaryT = app.i18next.getFixedT(locale, 'dictionary');
-
-    lookupService.search(slots.item, dictionaryT).then(result => {
-      if (result) {
-        done(
-          app.t('text', { slots, result })
-        );
-      } else {
-        done(
-          app.t('text_error2', slots)
-        );
-      }
+    // const result = app.t(`dictionary.${slots.item}`);
+    const dictionary = app.t('dictionary', {
+      returnObjects: true,
+      defaultValue: {}
     });
+
+    lookupService.search(slots.item, dictionary).then(result => {
+      if (result) {
+        done(app.t('text', { slots, result }));
+      } else {
+        done(app.t('text_error2', slots));
+      }
+    }).catch(console.error);
+
   });
 };

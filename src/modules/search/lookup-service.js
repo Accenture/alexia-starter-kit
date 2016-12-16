@@ -5,11 +5,13 @@
  */
 module.exports = {
   /**
-   * Retrieves explanation for one key word using localized search function
+   * Retrieves explanation for one key word from dictionary
    * @param {string} key - word to search
-   * @param {Function} localizedSearchFcn - translation function, takes options object specifying falsy return value when translation was not found
+   * @param {Object} dictionary - object with keywords as properties and string as values
    */
-  search: (key, localizedSearchFcn) => new Promise(resolve => {
-    resolve(localizedSearchFcn(key, { defaultValue: null })); // cannot use default value undefined
+  search: (key, dictionary) => new Promise(resolve => {
+    setTimeout(() => {
+      resolve(dictionary[key]);
+    }, 500);
   })
 };

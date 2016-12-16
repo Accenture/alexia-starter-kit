@@ -6,7 +6,6 @@ const app = rootRequire('src/app');
 const lookupService = rootRequire('src/modules/search/lookup-service');
 
 describe('(Intent) Search', () => {
-
   const description = 'a item defined in this dictionary';
   const unknownItem = 'someUnknownItem';
   let dictionaryStub;
@@ -32,7 +31,7 @@ describe('(Intent) Search', () => {
   });
 
   it('should handle SearchIntent', done => {
-    const someItemKey = 'someItem';
+    const someItemKey = 'knownItem';
     const expectedResponseText = `${someItemKey} is ${description}`;
     const intentRequest = alexia.createIntentRequest('SearchIntent', {item: someItemKey});
 

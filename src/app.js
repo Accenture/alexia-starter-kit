@@ -21,7 +21,7 @@ i18next
       loadPath: 'locales/{{lng}}/{{ns}}.json' // Path is relative to your current working directory - change it accordingly
     },
     preload: ['en', 'de'],
-    ns: ['translation', 'custom-slots', 'dictionary']
+    ns: ['translation', 'custom-slots'] // List all namespaces so they are preloaded at startup
   });
 
 app.setI18next(i18next);
@@ -31,6 +31,13 @@ app.setI18next(i18next);
  * Example invocation: 'Alexa, start <my-app-name>'
  */
 app.onStart(() => {
+  return app.t('text');
+});
+
+/**
+ * Register callback to be executed when app is being terminated.
+ */
+app.onEnd(() => {
   return app.t('text');
 });
 
