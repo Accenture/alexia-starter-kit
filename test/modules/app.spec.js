@@ -21,4 +21,14 @@ describe('(Alexa Skill) App', () => {
       done();
     });
   });
+
+  it('should handle SessionEndedRequest', done => {
+    const sessionEndedRequest = alexia.createSessionEndedRequest();
+
+    app.handle(sessionEndedRequest, data => {
+      const text = data.response.outputSpeech.text;
+      expect(text).to.equal('Goodbye from Alexia Starter Kit');
+      done();
+    });
+  });
 });

@@ -3,18 +3,17 @@ const alexia = require('alexia');
 const sinon = require('sinon');
 
 const app = rootRequire('src/app');
-const dictionary = rootRequire('src/modules/search/dictionary');
+const lookupService = rootRequire('src/modules/search/lookup-service');
 
 describe('(Intent) Search', () => {
-
   const description = 'a item defined in this dictionary';
   const unknownItem = 'someUnknownItem';
   let dictionaryStub;
 
   beforeEach(() => {
-    dictionaryStub = sinon.stub(dictionary, 'search', item => {
+    dictionaryStub = sinon.stub(lookupService, 'search', (key, dictionary) => {
       return new Promise(resolve => {
-        if (item === unknownItem) {
+        if (key === unknownItem) {
           resolve();
         } else {
           resolve(description);
@@ -32,7 +31,7 @@ describe('(Intent) Search', () => {
   });
 
   it('should handle SearchIntent', done => {
-    const someItemKey = 'someItem';
+    const someItemKey = 'knownItem';
     const expectedResponseText = `${someItemKey} is ${description}`;
     const intentRequest = alexia.createIntentRequest('SearchIntent', {item: someItemKey});
 

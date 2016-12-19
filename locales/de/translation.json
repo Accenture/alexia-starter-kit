@@ -1,0 +1,31 @@
+{
+  "LaunchRequest": {
+    "text": "Wilkommen bei Alexia Starter Kit"
+  },
+  "SessionEndedRequest": {
+    "text": "Auf Wiedersehen von Alexia Starter Kit"
+  },
+  "DefaultActionFail": {
+    "text": "Ihr Anweisung ist ungültig"
+  },
+  "HelloIntent": {
+    "utterances": "hallo",
+    "text": "Hallo"
+  },
+  "SearchIntent": {
+    "utterances": [
+      "Suche nach {item:Item}",
+      "Was ist {item:Item}",
+      "Beschreiben {item:Item}"
+    ],
+    "text": "{{slots.item}} ist {{result}}",
+    "text_error1": "Ich habe Ihre Suchbegriffe nicht verstanden",
+    "text_error2": "Keine Übereinstimmung für {{item}} gefunden",
+    "dictionary": {
+      "Auto": "ein meist geschlossenes Fahrzeug, das gewöhnlich vier Räder hat, von einem Motor angetrieben wird und besonders zur Beförderung von Personen dient",
+      "Fahrrad": "ein Fahrzeug, das zwei Räder hat, auf dem man sitzt und mit den Beinen eine Art Zahnrad in Bewegung hält, das über eine Kette das Hinterrad antreibt",
+      "Haus": "ein Gebäude das in verschiedene Räume und Stockwerke aufgeteilt ist und das Menschen als Wohnung oder Arbeitsraum dient",
+      "Schwimmbad": "Gebäude oder Anlage im Freien mit Becken zum Baden und Schwimme"
+    }
+  }
+}

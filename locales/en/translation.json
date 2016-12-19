@@ -1,0 +1,31 @@
+{
+  "LaunchRequest": {
+    "text": "Welcome to Alexia Starter Kit"
+  },
+  "SessionEndedRequest": {
+    "text": "Goodbye from Alexia Starter Kit"
+  },
+  "DefaultActionFail": {
+    "text": "Sorry, your command is invalid"
+  },
+  "HelloIntent": {
+    "utterances": "hello",
+    "text": "Hello"
+  },
+  "SearchIntent": {
+    "utterances": [
+      "Search for {item:Item}",
+      "What is {item:Item}",
+      "Describe me {item:Item}"
+    ],
+    "text": "{{slots.item}} is {{result}}",
+    "text_error1": "I did not understand your search item",
+    "text_error2": "No match found for {{item}}",
+    "dictionary": {
+      "car": "a road vehicle, typically with four wheels",
+      "bike": "a bicycle or motorcycle",
+      "house": "a building for human habitation",
+      "pool": "a small area of still water, typically one formed naturally"
+    }
+  }
+}
