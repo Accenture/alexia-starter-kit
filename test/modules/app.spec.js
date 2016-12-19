@@ -23,9 +23,9 @@ describe('(Alexa Skill) App', () => {
   });
 
   it('should handle SessionEndedRequest', done => {
-    const launchRequest = alexia.createSessionEndedRequest();
+    const sessionEndedRequest = alexia.createSessionEndedRequest();
 
-    app.handle(launchRequest, data => {
+    app.handle(sessionEndedRequest, data => {
       const text = data.response.outputSpeech.text;
       expect(text).to.equal('Goodbye from Alexia Starter Kit');
       done();
