@@ -217,7 +217,7 @@ lint.with{
 }
 
 deployLambda.with{
-  description("This job will deploy the service to AWS Lambda.  You must created a global parameter with your AWS ACCESS and SECRET access keys.")
+  description("This job will deploy the service to AWS Lambda.  You must have created a global parameter with your AWS ACCESS and SECRET access keys.")
   parameters{
     stringParam("B",'',"Parent build number")
     stringParam("PARENT_BUILD","Get_Code","Parent build name")
